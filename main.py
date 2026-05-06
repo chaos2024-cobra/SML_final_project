@@ -1,7 +1,5 @@
 # ============================================================
-#  SML Project — Main Entry Point
-#  Runs Parts A → B → C → D in sequence.
-#  Each part_*.py contains only helper/library functions.
+#  SML Project — Driver for all parts
 # ============================================================
 
 import scipy.sparse as sp
@@ -85,7 +83,6 @@ def run_part_d(X_tfidf, embs, y):
 
 if __name__ == "__main__":
 
-    # ── Load dataset once; share across all parts ──────────────
     df = load_data()
     reviews = df["review"].tolist()
     y = df["label"].values
